@@ -1,0 +1,33 @@
+<div class="container">
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllVehicles" (click)="viewAllVehicles=true; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Vehicles</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllBookedVehicles" (click)="viewAllVehicles=false; viewAllBookedVehicles=true; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Booked Vehicles</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllFreeVehicles" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=true; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Free Vehicles</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllCustomers" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=true; addManager=false; launchConsole=false;">View All Customers</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="addManager" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=true; launchConsole=false;">Add Manager</button>
+        </li>
+        <li class="nav-item">
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="launchConsole" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=true;">Launch Console</button>
+        </li>
+        <li class="nav-item">
+            <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="logout" (click)="logOut()">Logout</button>
+          </li>
+      </ul>
+    </nav>
+    <app-view-all-vehicles-admin *ngIf="viewAllVehicles"></app-view-all-vehicles-admin>
+    <app-view-all-booked-vehicles-admin *ngIf="viewAllBookedVehicles"></app-view-all-booked-vehicles-admin>
+    <app-view-all-free-vehicles-admin *ngIf="viewAllFreeVehicles"></app-view-all-free-vehicles-admin>
+    <app-view-all-customers-admin *ngIf="viewAllCustomers"></app-view-all-customers-admin>
+    <app-add-manager-admin *ngIf="addManager"></app-add-manager-admin>
+    <app-launch-console-admin  *ngIf="launchConsole"></app-launch-console-admin>
+</div>

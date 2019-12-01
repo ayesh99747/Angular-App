@@ -1,0 +1,22 @@
+<div class="mt-5 container text-center">
+  <h3>Please enter username and password to login</h3><br>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Username or Email Address</mat-label>
+    <input matInput placeholder="Username or Email Address"  required type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="service.formData.username">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" required type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="service.formData.password">
+    </mat-form-field>
+  </p>
+  <button class="mt-4" mat-raised-button color="primary" type="submit" [disabled]="form.invalid"> Login </button>
+  <br><br>
+  <button class="mt-4" mat-raised-button color="primary" type="reset"> Reset  </button>
+  <br><br>
+  <button class="mt-4" mat-raised-button color="primary" type="button" (click)="addCustomer()"> Register  </button>
+</form>
+</div>

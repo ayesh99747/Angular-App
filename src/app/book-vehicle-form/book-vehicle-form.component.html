@@ -1,0 +1,38 @@
+<div class="bookVehicleForm">
+    <h3 align="center"> Book a Vehicle </h3>
+    <h4 id="heading">Please enter your personal details</h4>
+    <div  class="example-container">
+        <form class="example-form" #bookVehicleForm="ngForm" (ngSubmit)="OnSubmit()">
+          <mat-form-field class="form-group">
+              <input matInput class="form-control" placeholder="Username" required type="text" name="username" [(ngModel)]= "bookingModel.username" disabled>
+          </mat-form-field><br>
+          <mat-form-field class="form-group">
+              <input matInput class="form-control" placeholder="Plate Number" [value]="plateNumber" required type="text" name="plateNumber"  [(ngModel)]= "bookingModel.plateNumber" disabled>
+          </mat-form-field><br>
+          <mat-form-field class="form-group">
+              <input matInput class="form-control" [matDatepicker]="picker1" [min]="minDate"  placeholder="Choose pick-up date" name="pickUpDate"  [(ngModel)]= "bookingModel.pickUpDate" disabled>
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #picker1  disabled="false"></mat-datepicker>
+          </mat-form-field><br>
+          <mat-form-field class="form-group">
+              <input matInput class="form-control" [matDatepicker]="picker2" [min]="bookingModel.pickUpDate"  placeholder="Choose drop-off date" name="dropOffDate"  [(ngModel)]= "bookingModel.dropOffDate" disabled>
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker  touchUi #picker2  disabled="false"></mat-datepicker>
+          </mat-form-field><br>
+          <button mat-raised-button color="primary" type="submit" >Submit</button>
+          <button mat-raised-button color="primary" type="button" (click)="resetForm()">Reset</button>
+        </form>
+    </div><br>
+    <h4 id="heading">Please select a vehicle to book</h4>
+    <h5 id="heading">Cars - </h5>
+    <app-car-table (emittedText)="getText($event)"></app-car-table>
+    <br><br>
+    <h5 id="heading">Vans - </h5>
+    <app-van-table  (emittedText)="getText($event)"></app-van-table>
+    <br><br>
+    <h5 id="heading">Motorbikes - </h5>
+    <app-motorbike-table  (emittedText)="getText($event)"></app-motorbike-table>
+    <br><br>
+
+  </div>
+

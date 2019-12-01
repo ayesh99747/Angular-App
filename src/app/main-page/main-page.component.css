@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+#btn1{
+  width: 200px;
+  height: 40px;
+  display:inline-block;
+}
+#btn2{
+  width: 200px;
+  height: 40px;
+  display:inline-block;
+}
+
+
