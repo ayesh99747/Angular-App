@@ -10,7 +10,9 @@ export class MainPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    sessionStorage.setItem('validSession', 'false');
+    sessionStorage.setItem('validCustomerSession', 'false');
+    sessionStorage.setItem('validAdminSession', 'false');
+
   }
 
 }

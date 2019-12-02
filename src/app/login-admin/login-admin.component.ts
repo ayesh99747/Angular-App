@@ -11,7 +11,7 @@ import {MatDialog} from '@angular/material';
 })
 export class LoginAdminComponent implements OnInit {
 
-  constructor(private router: Router, private service: LoginAdminService) { }
+  constructor(private router: Router, public service: LoginAdminService) { }
 
   ngOnInit() {
     this.resetForm;
@@ -34,7 +34,7 @@ export class LoginAdminComponent implements OnInit {
         console.log(res);
         if (res === true) {
           this.router.navigate(['adminPortal']);
-          sessionStorage.setItem('validSession', 'true');
+          sessionStorage.setItem('validAdminSession', 'true');
           this.resetForm();
         } else {
           alert('Invalid Credentials');

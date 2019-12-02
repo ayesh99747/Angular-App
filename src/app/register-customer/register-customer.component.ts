@@ -12,7 +12,7 @@ import * as EmailValidator from 'email-validator';
 })
 export class RegisterCustomerComponent implements OnInit {
 
-  constructor(private router: Router, private service: AddCustomerService) { }
+  constructor(private router: Router, public service: AddCustomerService) { }
 
   ngOnInit() {
     this.resetForm();

@@ -11,7 +11,7 @@ export class CustomerPageComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    if (sessionStorage.getItem('validSession') === 'false' || sessionStorage.getItem('validSession') === '' ) {
+    if (sessionStorage.getItem('validCustomerSession') === 'false' || sessionStorage.getItem('validCustomerSession') === null ) {
       alert('You have not been logged in!');
       this.router.navigate(['']);
     }
@@ -21,7 +21,7 @@ export class CustomerPageComponent implements OnInit {
   //This function is called when the logoutbutton is called
   logOut(){
     sessionStorage.removeItem('username');
-    sessionStorage.setItem('validSession', 'false');
+    sessionStorage.setItem('validCustomerSession', 'false');
     this.router.navigate(['']);
   }
 

@@ -8,23 +8,23 @@
         </li>
         <!-- View All Booked Vehicles Button -->
         <li class="nav-item">
-          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllBookedVehicles" (click)="viewVehiclesToBeReturned=true; viewAllVehicles=false; viewAllBookedVehicles=true; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Booked Vehicles</button>
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllBookedVehicles" (click)="viewAllVehicles=false; viewAllBookedVehicles=true; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Booked Vehicles</button>
         </li>
         <!-- View All Free Vehicles Button -->
         <li class="nav-item">
-          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllFreeVehicles" (click)="viewVehiclesToBeReturned=true; viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=true; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Free Vehicles</button>
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllFreeVehicles" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=true; viewAllCustomers=false; addManager=false; launchConsole=false;">View All Free Vehicles</button>
         </li>
         <!-- View All Customers -->
         <li class="nav-item">
-          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllCustomers" (click)="viewVehiclesToBeReturned=true; viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=true; addManager=false; launchConsole=false;">View All Customers</button>
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="viewAllCustomers" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=true; addManager=false; launchConsole=false;">View All Customers</button>
         </li>
         <!-- Add Manager Button -->
         <li class="nav-item">
-          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="addManager" (click)="viewVehiclesToBeReturned=true; viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=true; launchConsole=false;">Add Manager</button>
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="addManager" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=true; launchConsole=false;">Add Manager</button>
         </li>
         <!-- Launch Console Button -->
         <li class="nav-item">
-          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="launchConsole" (click)="viewVehiclesToBeReturned=true; viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=true;">Launch Console</button>
+          <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="launchConsole" (click)="viewAllVehicles=false; viewAllBookedVehicles=false; viewAllFreeVehicles=false; viewAllCustomers=false; addManager=false; launchConsole=true;">Launch Console</button>
         </li>
         <!-- LogOut Button -->
         <li class="nav-item">
@@ -32,7 +32,6 @@
           </li>
       </ul>
     </nav>
-    <app-vehicles-to-be-returned *ngIf="!viewVehiclesToBeReturned" ></app-vehicles-to-be-returned>
     <app-view-all-vehicles-admin *ngIf="viewAllVehicles"></app-view-all-vehicles-admin>
     <app-view-all-booked-vehicles-admin *ngIf="viewAllBookedVehicles"></app-view-all-booked-vehicles-admin>
     <app-view-all-free-vehicles-admin *ngIf="viewAllFreeVehicles"></app-view-all-free-vehicles-admin>

@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class LoginCustomerComponent implements OnInit {
 
-  constructor(private router: Router, private service: LoginCustomerService) { }
+  constructor(private router: Router, public service: LoginCustomerService) { }
 
   ngOnInit() {
     this.resetForm;
@@ -33,7 +33,7 @@ export class LoginCustomerComponent implements OnInit {
         console.log(res);
         if (res === true) {
           sessionStorage.setItem('username', this.service.formData.username);
-          sessionStorage.setItem('validSession', 'true');
+          sessionStorage.setItem('validCustomerSession', 'true');
           this.router.navigate(['customerPortal']);
           this.resetForm();
         } else {

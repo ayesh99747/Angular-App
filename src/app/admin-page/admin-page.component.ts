@@ -12,7 +12,7 @@ export class AdminPageComponent implements OnInit {
 
   ngOnInit() {
     //WHen the page loads, it validates if you have logged in
-    if (sessionStorage.getItem('validSession') === 'false' || sessionStorage.getItem('validSession') === '') {
+    if (sessionStorage.getItem('validAdminSession') === 'false' || sessionStorage.getItem('validAdminSession') === null) {
       alert('You have not been logged in!');
       this.router.navigate(['']);
     }
@@ -22,7 +22,7 @@ export class AdminPageComponent implements OnInit {
   // When the logout button is clicked, this method is executed
   logOut() {
     sessionStorage.removeItem('validSession');
-    sessionStorage.setItem('validSession', 'false');
+    sessionStorage.setItem('validAdminSession', 'false');
     this.router.navigate(['']);
   }
 
