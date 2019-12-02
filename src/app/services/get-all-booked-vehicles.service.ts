@@ -22,14 +22,17 @@ export class GetAllBookedVehiclesService {
 
   }
 
+  //This method is used to get all the booked cars
   public getAllBookedCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.carUrl);
   }
 
+  //This method is used to get all the booked vans
   public getAllBookedVans(): Observable<Van[]> {
     return this.http.get<Van[]>(this.vanUrl);
   }
 
+  //This method is used to get all the booked motorbikes
   public getAllBookedMotorbikes(): Observable<Motorbike[]> {
     return this.http.get<Motorbike[]>(this.motorbikeUrl);
   }

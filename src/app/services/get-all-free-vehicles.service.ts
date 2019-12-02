@@ -22,14 +22,17 @@ export class GetAllFreeVehiclesService {
 
   }
 
+  //This method gets all the free cars
   public getAllFreeCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.carUrl);
   }
 
+  //This method gets all the free vans
   public getAllFreeVans(): Observable<Van[]> {
     return this.http.get<Van[]>(this.vanUrl);
   }
 
+  //This method gets all the free motorbikes
   public getAllFreeMotorbikes(): Observable<Motorbike[]> {
     return this.http.get<Motorbike[]>(this.motorbikeUrl);
   }

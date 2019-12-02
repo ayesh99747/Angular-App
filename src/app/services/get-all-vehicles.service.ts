@@ -22,14 +22,17 @@ export class GetAllVehiclesService {
 
   }
 
+  //This method gets all the cars
   public getAllCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.carUrl);
   }
 
+  //This method gets all the vans
   public getAllVans(): Observable<Van[]> {
     return this.http.get<Van[]>(this.vanUrl);
   }
 
+  //This method gets all the motorbikes
   public getAllMotorbikes(): Observable<Motorbike[]> {
     return this.http.get<Motorbike[]>(this.motorbikeUrl);
   }

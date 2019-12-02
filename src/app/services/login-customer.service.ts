@@ -12,7 +12,8 @@ export class LoginCustomerService {
 
   readonly apiUrl = 'http://localhost:8080/api/customers/validateLogin';
 
-  validateLogin(loginInfo: LoginInfo) {
+  //This method validates teh logins
+  public validateLogin(loginInfo: LoginInfo) {
     return this.http.post(this.apiUrl, loginInfo);
   }
 }

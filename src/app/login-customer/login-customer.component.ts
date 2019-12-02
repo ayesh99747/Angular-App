@@ -26,6 +26,7 @@ export class LoginCustomerComponent implements OnInit {
     };
   }
 
+  //This is executed when teh form is submitted
   onSubmit(form: NgForm) {
     console.log(form.value);
     this.service.validateLogin(form.value).subscribe(res => {
@@ -42,6 +43,7 @@ export class LoginCustomerComponent implements OnInit {
       );
   }
 
+  // This is sexcuted if the customer clicks on register
   addCustomer(){
     this.router.navigate(['registerCustomer']);
   }

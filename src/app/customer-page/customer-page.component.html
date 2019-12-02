@@ -1,12 +1,15 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <ul class="navbar-nav">
+        <!-- Book Vehicles Button -->
         <li class="nav-item">
           <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="bookVehicles" (click)="bookVehicles=true;previouslyBookedVehicles=false;">Book Vehicle</button>
         </li>
+        <!-- Previously Booked Vehicles Button -->
         <li class="nav-item">
           <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="previouslyBookedVehicles" (click)="bookVehicles=false;previouslyBookedVehicles=true;">View Previously Booked Vehicles</button>
         </li>
+        <!-- Logout Button -->
         <li class="nav-item">
           <button mat-button class="m-1 btn btn-light btn-outline-primary" Button label="logout" (click)="logOut()">Logout</button>
         </li>

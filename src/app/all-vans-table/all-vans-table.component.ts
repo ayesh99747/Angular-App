@@ -17,18 +17,12 @@ export class AllVansTableComponent implements OnInit, AfterViewInit {
  @ViewChild(MatSort, {static: false}) sort: MatSort;
  @ViewChild(MatTable, {static: false}) table: MatTable<Van>;
 
- @Input() message: string;
- @Output() emittedText = new EventEmitter<string>();
-
-
  dataSource: MatTableDataSource<any>;
  columnsToDisplay = ['plateNumber', 'make', 'model', 'yearOfManufacture', 'transmissionType', 'numberOfPassengers', 'combinedEfficiency',  'numberOfFreeMiles', 'fuelType', 'rate'];
- sendPlateNumber(plateNumber : string){
-   this.emittedText.emit(plateNumber);
-   console.log(plateNumber);
-  }
+
 
  ngOnInit() {
+   //When the page loads the table is populated
    this.getServiceData();
  }
  ngAfterViewInit() {

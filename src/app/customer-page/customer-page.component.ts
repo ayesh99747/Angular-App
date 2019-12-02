@@ -18,6 +18,7 @@ export class CustomerPageComponent implements OnInit {
 
   }
 
+  //This function is called when the logoutbutton is called
   logOut(){
     sessionStorage.removeItem('username');
     sessionStorage.setItem('validSession', 'false');

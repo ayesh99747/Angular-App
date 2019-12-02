@@ -14,6 +14,7 @@ export class GetMotorbikesService {
     this.url = 'http://localhost:8080/api/vehicles/getAllFreeMotorbikes';
   }
 
+  //This method finds all the motorbikes
   public findAll(): Observable<Motorbike[]> {
     return this.http.get<Motorbike[]>(this.url);
   }

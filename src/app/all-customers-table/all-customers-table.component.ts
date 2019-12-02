@@ -19,18 +19,12 @@ export class AllCustomersTableComponent implements OnInit, AfterViewInit {
  @ViewChild(MatSort, {static: false}) sort: MatSort;
  @ViewChild(MatTable, {static: false}) table: MatTable<Customer>;
 
- @Input() message: string;
- @Output() emittedText = new EventEmitter<string>();
-
-
  dataSource: MatTableDataSource<any>;
  columnsToDisplay = ['customerName','emailAddress','driversLicenseNumber','username'];
- sendPlateNumber(plateNumber : string){
-   this.emittedText.emit(plateNumber);
-   console.log(plateNumber);
-  }
+
 
  ngOnInit() {
+   //When the page loads the table is populated
    this.getServiceData();
  }
  ngAfterViewInit() {
@@ -38,6 +32,7 @@ export class AllCustomersTableComponent implements OnInit, AfterViewInit {
    this.dataSource.paginator = this.paginator;
    this.table.dataSource = this.dataSource;
  }
+ //This function gets the data to populate the table
  getServiceData() {
    this.GetAllCustomersService.getAllCustomers().subscribe(
      data => {

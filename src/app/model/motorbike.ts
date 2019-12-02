@@ -1,3 +1,4 @@
+import { Schedule } from './schedule';
 export interface Motorbike {
   plateNumber: string;
   make: string;
@@ -11,9 +12,7 @@ export interface Motorbike {
   numberOfFreeMiles: number;
   fuelType: string;
   rate: number;
-  scheduleForVehicle: {
-    bookedDates: Date[];
-  };
+  scheduleForVehicle: Schedule;
   motorbikeType: string;
   sideCarPresent: boolean;
   helmetProvided: boolean;

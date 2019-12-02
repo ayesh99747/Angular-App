@@ -23,6 +23,7 @@ export class BookVehicleFormComponent implements OnInit {
   bookingModel = new Booking(sessionStorage.getItem('username'), '', null, null, new Date());
 
   ngOnInit() {
+    //When the page loads the form is intialised
     this.resetForm();
   }
 
@@ -39,12 +40,14 @@ export class BookVehicleFormComponent implements OnInit {
 
   }
 
+  //This is the notification bar
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 10000,
     });
   }
 
+  //This function validates the form
   validateForm(): boolean {
     if (this.bookingModel.username === '') {
       this.openSnackBar(('Please enter username!'), 'Close');
@@ -71,6 +74,7 @@ export class BookVehicleFormComponent implements OnInit {
     return true;
   }
 
+  //On Form Submission this function is called
   OnSubmit() {
     console.log(this.bookingModel);
     if (this.validateForm() === true){

@@ -1,30 +1,36 @@
 <div class="mt-5 container text-center">
   <h3>Please enter customer details</h3><br>
+  <!-- Register Customer Form -->
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <!-- Customer Name -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Customer Name</mat-label>
     <input matInput placeholder="Customer Name"  required type="text" class="form-control" name="customerName" #customerName="ngModel" [(ngModel)]="service.formData.customerName">
     </mat-form-field>
   </p>
+  <!-- Email Address -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Email Address</mat-label>
     <input matInput placeholder="Email Address"  required type="email" class="form-control" name="emailAddress" #emailAddress="ngModel" [(ngModel)]="service.formData.emailAddress" email>
     </mat-form-field>
   </p>
+  <!-- Drivers License Number -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Driver's License Number</mat-label>
     <input matInput placeholder="Driver's License Number"  required type="number" class="form-control" name="driversLicenseNumber" #driversLicenseNumber="ngModel" [(ngModel)]="service.formData.driversLicenseNumber">
     </mat-form-field>
   </p>
+  <!-- Username -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput placeholder="Username"  required type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="service.formData.username">
     </mat-form-field>
   </p>
+  <!-- Password -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>

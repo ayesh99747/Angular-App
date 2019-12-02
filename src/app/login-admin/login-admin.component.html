@@ -1,12 +1,15 @@
 <div class="mt-5 container text-center">
   <h3>Please enter username and password to login</h3><br>
+  <!-- Login Form -->
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <!-- Username Feild -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput placeholder="Username"  required type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="service.formData.username">
     </mat-form-field>
   </p>
+  <!-- Password Feild -->
   <p>
     <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>

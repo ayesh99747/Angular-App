@@ -13,6 +13,7 @@ export class StartConsoleService {
     this.url = 'http://localhost:8080/api/managers/console';
   }
 
+  //This method starts the console
   public startConsole() : Observable<any> {
     return this.http.get<any>(this.url);
   }

@@ -14,6 +14,7 @@ export class GetVansService {
     this.url = 'http://localhost:8080/api/vehicles/getAllFreeVans';
   }
 
+  //This method finds all the vans
   public findAll(): Observable<Van[]> {
     return this.http.get<Van[]>(this.url);
   }

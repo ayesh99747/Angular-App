@@ -14,22 +14,17 @@ export class AllBookedCarsTableComponent implements OnInit, AfterViewInit {
   constructor(private GetAllVehiclesService: GetAllBookedVehiclesService) {
 
   }
+
  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
  @ViewChild(MatSort, {static: false}) sort: MatSort;
  @ViewChild(MatTable, {static: false}) table: MatTable<Car>;
 
- @Input() message: string;
- @Output() emittedText = new EventEmitter<string>();
-
-
  dataSource: MatTableDataSource<any>;
  columnsToDisplay = ['plateNumber', 'make', 'model', 'yearOfManufacture', 'transmissionType', 'numberOfPassengers', 'combinedEfficiency',  'numberOfFreeMiles', 'fuelType', 'rate'];
- sendPlateNumber(plateNumber : string){
-   this.emittedText.emit(plateNumber);
-   console.log(plateNumber);
-  }
+
 
  ngOnInit() {
+   //When the page loads the table is populated
    this.getServiceData();
  }
  ngAfterViewInit() {
@@ -37,6 +32,7 @@ export class AllBookedCarsTableComponent implements OnInit, AfterViewInit {
    this.dataSource.paginator = this.paginator;
    this.table.dataSource = this.dataSource;
  }
+ //This function gets the data to populate the table
  getServiceData() {
    this.GetAllVehiclesService.getAllBookedCars().subscribe(
      data => {

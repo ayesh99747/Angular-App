@@ -11,6 +11,7 @@ export class AdminPageComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    //WHen the page loads, it validates if you have logged in
     if (sessionStorage.getItem('validSession') === 'false' || sessionStorage.getItem('validSession') === '') {
       alert('You have not been logged in!');
       this.router.navigate(['']);

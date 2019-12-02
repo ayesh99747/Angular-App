@@ -15,6 +15,7 @@ export class GetAllCustomersService {
 
   }
 
+  //This method gets all the customers
   public getAllCustomers(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.url);
   }

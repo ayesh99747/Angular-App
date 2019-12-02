@@ -23,6 +23,7 @@ export class VehiclesToBeReturnedComponent implements OnInit, AfterViewInit {
  columnsToDisplay = ['plateNumber', 'make', 'model', 'yearOfManufacture'];
 
  ngOnInit() {
+   //When the page loads the table is populated
    this.getServiceData();
  }
  ngAfterViewInit() {
@@ -30,6 +31,7 @@ export class VehiclesToBeReturnedComponent implements OnInit, AfterViewInit {
    this.dataSource.paginator = this.paginator;
    this.table.dataSource = this.dataSource;
  }
+ //This function gets the data to populate the table
  getServiceData() {
    this.GetVehiclesToBeReturnedService.getAllVehicles().subscribe(
      data => {

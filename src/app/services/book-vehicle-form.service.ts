@@ -11,11 +11,10 @@ export class BookVehicleFormService {
 
   constructor(private http: HttpClient) { }
 
-  //formData = new Booking();
-
   readonly apiUrl = 'http://localhost:8080/api/bookings/newBooking';
 
-  bookVehicle(booking: Booking) {
+  //This method is used to book vehicles
+  public bookVehicle(booking: Booking) {
     return this.http.post(this.apiUrl, booking);
   }
 }

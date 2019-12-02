@@ -14,6 +14,7 @@ export class GetVehiclesToBeReturnedService {
     this.url = 'http://localhost:8080/api/vehicles/getVehiclesToBeReturned';
   }
 
+  //This method gets all the Vehicles
   public getAllVehicles(): Observable<Car[]> {
     return this.http.get<Car[]>(this.url);
   }

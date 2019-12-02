@@ -18,11 +18,12 @@ export class AddManagerService {
 
   formData = new Manager();
 
-
-  addManager(manager: Manager) {
+   //This method adds a manager
+  public addManager(manager: Manager) {
     return this.http.post(this.url1, manager);
   }
 
+  //This method validates manager username
   public validateManagerUsername(username: string): Observable<boolean> {
     this.url2 = 'http://localhost:8080/api/managers/isUsernamePresent?username=' + username;
     return this.http.get<boolean>(this.url2);

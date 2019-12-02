@@ -31,6 +31,7 @@ export class RegisterCustomerComponent implements OnInit {
     };
   }
 
+  //This is executed on form submission
   onSubmit(form: NgForm) {
     if (this.validateEmailAddress()) {
       console.log(form.value);
@@ -57,6 +58,7 @@ export class RegisterCustomerComponent implements OnInit {
 
   }
 
+  //This function validates email addresses
   validateEmailAddress() {
     if (!EmailValidator.validate(this.service.formData.emailAddress)) {
       return false;
@@ -64,11 +66,5 @@ export class RegisterCustomerComponent implements OnInit {
     return true;
   }
 
-
-
-  emailIsValid(email) {
-
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
 
 }

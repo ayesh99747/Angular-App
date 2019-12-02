@@ -30,6 +30,7 @@ export class CarTableComponent implements OnInit, AfterViewInit {
    }
 
   ngOnInit() {
+    //When the page loads the table is populated
     this.getServiceData();
   }
   ngAfterViewInit() {
@@ -37,6 +38,7 @@ export class CarTableComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }
+  //This function gets the data to populate the table
   getServiceData() {
     this.GetCarsService.findAll().subscribe(
       data => {

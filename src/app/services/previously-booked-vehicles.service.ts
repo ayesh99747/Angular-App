@@ -14,6 +14,7 @@ export class PreviouslyBookedVehiclesService {
     this.url = 'http://localhost:8080/api/vehicles/getBookings?username=';
   }
 
+  //This method gets all the bookings
   public findAll(): Observable<Booking[]> {
     const user = sessionStorage.getItem('username');
     this.url += user;

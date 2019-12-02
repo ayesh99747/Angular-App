@@ -14,7 +14,8 @@ export class LoginAdminService {
 
   readonly apiUrl = 'http://localhost:8080/api/managers/validateLogin';
 
-  validateLogin(loginInfo: LoginInfo) {
+  //This method validates the logins
+  public validateLogin(loginInfo: LoginInfo) {
     return this.http.post(this.apiUrl, loginInfo);
   }
 }

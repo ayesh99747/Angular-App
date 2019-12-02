@@ -25,6 +25,7 @@ export class LaunchConsoleAdminComponent implements OnInit {
     this.openSnackBar('Console has been launched', 'Close');
   }
 
+  //This function lauches the console
   getServiceData() {
     this.startConsoleService.startConsole().subscribe(
       res => {

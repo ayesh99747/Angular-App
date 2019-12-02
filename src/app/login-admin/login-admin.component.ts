@@ -27,6 +27,7 @@ export class LoginAdminComponent implements OnInit {
     };
   }
 
+  //When the submit button is clicked this function is called
   onSubmit(form: NgForm) {
     console.log(form.value);
     this.service.validateLogin(form.value).subscribe(res => {

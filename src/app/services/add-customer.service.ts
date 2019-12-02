@@ -18,11 +18,12 @@ export class AddCustomerService {
 
   formData = new Customer();
 
-
-  addCustomer(customer: Customer) {
+  //This method is used to add a cutomer
+  public addCustomer(customer: Customer) {
     return this.http.post(this.url1, customer);
   }
 
+  //This method validates login info
   public validateCustomerUsername(username: string): Observable<boolean> {
     this.url2 = 'http://localhost:8080/api/customers/isUsernamePresent?username=' + username;
     return this.http.get<boolean>(this.url2);

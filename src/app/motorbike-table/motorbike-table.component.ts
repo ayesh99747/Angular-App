@@ -29,6 +29,7 @@ export class MotorbikeTableComponent implements OnInit, AfterViewInit {
    }
 
   ngOnInit() {
+    //When the page loads the table is populated
     this.getServiceData();
   }
 
@@ -37,7 +38,7 @@ export class MotorbikeTableComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }
-
+//This function gets the data to populate the table
   getServiceData() {
     this.GetMotorbikesService.findAll().subscribe(
       data => {

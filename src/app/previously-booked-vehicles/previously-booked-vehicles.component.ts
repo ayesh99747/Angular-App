@@ -17,14 +17,11 @@ export class PreviouslyBookedVehiclesComponent implements OnInit, AfterViewInit 
  @ViewChild(MatSort, {static: false}) sort: MatSort;
  @ViewChild(MatTable, {static: false}) table: MatTable<Booking>;
 
- @Input() message: string;
- @Output() emittedText = new EventEmitter<string>();
-
-
  dataSource: MatTableDataSource<any>;
  public columnsToDisplay = ['plateNumber','bookedDate', 'pickUpDate', 'dropOffDate'];
 
  ngOnInit() {
+   //When the page loads the table is populated
    this.getServiceData();
  }
  ngAfterViewInit() {
@@ -32,6 +29,7 @@ export class PreviouslyBookedVehiclesComponent implements OnInit, AfterViewInit 
    this.dataSource.paginator = this.paginator;
    this.table.dataSource = this.dataSource;
  }
+ //This function gets the data to populate the table
  getServiceData() {
    this.PreviouslyBookedVehiclesService.findAll().subscribe(
      data => {

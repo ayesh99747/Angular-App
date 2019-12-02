@@ -1,3 +1,4 @@
+import { Schedule } from './schedule';
 export interface Van {
   plateNumber: string;
   make: string;
@@ -11,9 +12,7 @@ export interface Van {
   numberOfFreeMiles: number;
   fuelType: string;
   rate: number;
-  scheduleForVehicle: {
-    bookedDates: Date[];
-  };
+  scheduleForVehicle: Schedule;
   numberOfSuitcases: string;
   numberOfDoors: string;
 }
