@@ -5,6 +5,11 @@
   height: 80%;
   width: 100%;
 }
+.divider{
+  width: 20px;
+  height:auto;
+  display:inline-block;
+}
 #btn1{
   width: 200px;
   height: 40px;

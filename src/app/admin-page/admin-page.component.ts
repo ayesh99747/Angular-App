@@ -15,9 +15,11 @@ export class AdminPageComponent implements OnInit {
       alert('You have not been logged in!');
       this.router.navigate(['']);
     }
+
   }
 
-  logOut(){
+  // When the logout button is clicked, this method is executed
+  logOut() {
     sessionStorage.removeItem('validSession');
     sessionStorage.setItem('validSession', 'false');
     this.router.navigate(['']);

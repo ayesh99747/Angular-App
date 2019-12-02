@@ -19,8 +19,11 @@
               <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
               <mat-datepicker  touchUi #picker2  disabled="false"></mat-datepicker>
           </mat-form-field><br>
-          <button mat-raised-button color="primary" type="submit" >Submit</button>
-          <button mat-raised-button color="primary" type="button" (click)="resetForm()">Reset</button>
+          <div>
+              <button mat-raised-button color="primary" type="submit" >Submit</button>
+              <div class="divider"></div>
+              <button mat-raised-button color="primary" type="button" (click)="resetForm()">Reset</button>
+          </div>
         </form>
     </div><br>
     <h4 id="heading">Please select a vehicle to book</h4>

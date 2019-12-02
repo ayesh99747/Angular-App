@@ -50,6 +50,7 @@ import { AllFreeMotorbikesTableComponent } from './all-free-motorbikes-table/all
 import { AllFreeVansTableComponent } from './all-free-vans-table/all-free-vans-table.component';
 import { AllCustomersTableComponent } from './all-customers-table/all-customers-table.component';
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
+import { VehiclesToBeReturnedComponent } from './vehicles-to-be-returned/vehicles-to-be-returned.component';
 
 
 
@@ -83,6 +84,7 @@ import { RegisterCustomerComponent } from './register-customer/register-customer
     AllFreeVansTableComponent,
     AllCustomersTableComponent,
     RegisterCustomerComponent,
+    VehiclesToBeReturnedComponent,
   ],
   imports: [
     BrowserModule,

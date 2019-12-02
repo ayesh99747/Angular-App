@@ -10,12 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddManagerAdminComponent implements OnInit {
 
-  constructor(private service: AddManagerService) { }
+  constructor(public service: AddManagerService) { }
 
   ngOnInit() {
     this.resetForm();
   }
 
+  //This resets the form
   resetForm(form?: NgForm) {
     if (form != null) {
       form.resetForm();
@@ -28,6 +29,7 @@ export class AddManagerAdminComponent implements OnInit {
     };
   }
 
+  //This is performed on form submission
   onSubmit(form: NgForm) {
     console.log(form.value);
     this.service.validateManagerUsername(this.service.formData.username).subscribe(res => {

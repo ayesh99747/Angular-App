@@ -13,9 +13,11 @@
     <input matInput placeholder="Password" required type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="service.formData.password">
     </mat-form-field>
   </p>
-  <button class="mt-4" mat-raised-button color="primary" type="submit" [disabled]="form.invalid"> Login </button>
-  <br><br>
-  <button class="mt-4" mat-raised-button color="primary" type="reset"> Reset  </button>
-  
+  <div>
+      <button class="mt-4" mat-raised-button color="primary" type="submit" [disabled]="form.invalid"> Login </button>
+      <div class="divider"></div>
+      <button class="mt-4" mat-raised-button color="primary" type="reset"> Reset  </button>
+  </div>
+
 </form>
 </div>
